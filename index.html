@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliance Service - Repair, Rental & Sales</title>
+  <link rel="stylesheet" href="../Frontend/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>Appliance Service</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="rental.html">Rentals</a></li>
+        <li><a href="sales.html">Sales</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="btn-secondary">Login</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Professional Fridge & Washing Machine Service</h1>
+      <p>Repair, Rental & Sales at Affordable Prices</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="scrollTo('services')">Book Service</button>
+        <button class="btn-secondary" onclick="window.location='rental.html'">Rent Appliance</button>
+        <button class="btn-accent" onclick="window.location='sales.html'">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Same Day Service</h3>
+          <p>Get your appliance fixed on the same day with our quick service</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👨‍🔧</div>
+          <h3>Expert Technicians</h3>
+          <p>Certified and experienced technicians for all appliance types</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔧</div>
+          <h3>Genuine Spare Parts</h3>
+          <p>We use only genuine spare parts for repairs and maintenance</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Affordable Pricing</h3>
+          <p>Competitive prices with transparent billing, no hidden charges</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>Doorstep Support</h3>
+          <p>Service at your doorstep without any inconvenience</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Warranty Support</h3>
+          <p>All repairs covered with warranty and after-sales support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <h3>Refrigerator Repair</h3>
+          <p>Cooling issues, gas charging, compressor repair, and more</p>
+          <button class="btn-small" onclick="window.location='services.html?type=refrigerator'">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Washing Machine Repair</h3>
+          <p>Drum repair, motor issues, water inlet problems, and spin issues</p>
+          <button class="btn-small" onclick="window.location='services.html?type=washing-machine'">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">❄️</div>
+          <h3>AC Service</h3>
+          <p>AC maintenance, cooling efficiency, and filter cleaning</p>
+          <button class="btn-small" onclick="window.location='services.html?type=ac'">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🍳</div>
+          <h3>Microwave Service</h3>
+          <p>Microwave repair and maintenance services</p>
+          <button class="btn-small" onclick="window.location='services.html?type=microwave'">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Installation</h3>
+          <p>Professional installation of new appliances</p>
+          <button class="btn-small" onclick="window.location='services.html'">Learn More</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>AMC Plans</h3>
+          <p>Annual Maintenance Contracts with special discounts</p>
+          <button class="btn-small" onclick="window.location='services.html'">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rental Section -->
+  <section class="rental-preview">
+    <div class="container">
+      <h2>Appliance Rentals</h2>
+      <p>Flexible monthly rental plans for appliances</p>
+      <div class="rental-grid" id="rentalGrid">
+        <!-- Rental items will be loaded here -->
+      </div>
+      <div class="text-center">
+        <button class="btn-primary" onclick="window.location='rental.html'">View All Rentals</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sales Section -->
+  <section class="sales-preview">
+    <div class="container">
+      <h2>Buy Appliances</h2>
+      <p>New and refurbished appliances with great discounts</p>
+      <div class="sales-grid" id="salesGrid">
+        <!-- Products will be loaded here -->
+      </div>
+      <div class="text-center">
+        <button class="btn-primary" onclick="window.location='sales.html'">Shop Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="reviews-carousel">
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Excellent service! The technician was professional and fixed my fridge quickly."</p>
+          <h4>- Rajesh Kumar</h4>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Great rental experience. Very affordable monthly plans and great customer support."</p>
+          <h4>- Priya Singh</h4>
+        </div>
+        <div class="review-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Best prices for appliances! The delivery was on time and in perfect condition."</p>
+          <h4>- Amit Patel</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-preview">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>📞 Phone</h3>
+          <p>+91-XXXXX-XXXXX</p>
+        </div>
+        <div class="contact-card">
+          <h3>💬 WhatsApp</h3>
+          <p>+91-XXXXX-XXXXX</p>
+        </div>
+        <div class="contact-card">
+          <h3>📧 Email</h3>
+          <p>info@applianceservice.com</p>
+        </div>
+        <div class="contact-card">
+          <h3>📍 Address</h3>
+          <p>Your City, State - Zip Code</p>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="window.location='contact.html'">Contact Us</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Repair Services</a></li>
+            <li><a href="rental.html">Appliance Rental</a></li>
+            <li><a href="sales.html">Buy Appliances</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Appliance Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
